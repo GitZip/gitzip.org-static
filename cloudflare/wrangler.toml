@@ -1,0 +1,23 @@
+name = "gitzip-gettoken-session-worker"
+main = "worker.js"
+compatibility_date = "2025-10-31"
+
+kv_namespaces = [
+  { binding = "SESSIONS", id = "860b69bfcfee41ed9ffca8ffc6286cf9" },
+  { binding = "SECRETS", id = "9ce0f694e84b4ed6b4c41f2125f0efd9" }
+]
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
